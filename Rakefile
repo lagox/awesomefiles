@@ -1,7 +1,25 @@
 require 'rubygems'
 require 'bundler/setup'
+require 'fileutils'
 require 'yaml'
 require 'erubis'
+
+module GitHub
+  def self.clone_or_update(git, dir)
+    if File.exists?(dir)
+      last_dir = Dir.pwd
+      Dir.chdir dir 
+      system "git pull origin master"
+      Dir.chdir last_dir
+    else
+      system "git clone #{git} #{dir}"
+    end
+  end
+
+  def self.name(git)
+    git.match(/\/([^\/]+)\.git$/).captures.first
+  end
+end
 
 scripts = []
 
