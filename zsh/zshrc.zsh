@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 plugins=(git)
 
 # Theme
-export ZSH_THEME="robbyrussell"
+export ZSH_THEME="wezm"
 
 # Start Oh My Zsh
 source $ZSH/oh-my-zsh.sh
