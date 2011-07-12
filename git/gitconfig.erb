@@ -5,3 +5,9 @@
 [github]
   user = <%= github['user'] %>
   token = <%= github['token'] %>
+
+[difftool "Kaleidoscope"]
+  cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+
+[diff]
+  tool = Kaleidoscope
