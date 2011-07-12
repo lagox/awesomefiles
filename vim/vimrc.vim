@@ -1,3 +1,7 @@
+" Pathogen
+
+call pathogen#runtime_append_all_bundles() 
+
 """
 """ Look and feel
 """
@@ -8,7 +12,7 @@
 set guifont=M+\ 1m:h12
 
 " Colorscheme
-" ?
+colorscheme perfect
 
 " Hide toolbar
 set guioptions-=T
