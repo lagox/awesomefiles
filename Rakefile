@@ -1,10 +1,12 @@
 require 'rubygems'
 require 'bundler/setup'
+require 'yaml'
 
 scripts = []
 
 BASE_DIR = File.expand_path('.')
 TMP_DIR  = File.expand_path('tmp')
+CONFIG   = YAML.load_file('config.yml')
 
 Dir.foreach('.') do |file_name|
  if File.directory?(file_name) and not file_name =~ /^\./
