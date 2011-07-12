@@ -1,3 +1,6 @@
+require 'rubygems'
+require 'bundler/setup'
+
 scripts = []
 
 BASE_DIR = File.expand_path('.')
