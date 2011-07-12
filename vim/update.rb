@@ -1,5 +1,8 @@
 module Vim
   def self.update!
-    puts 'TODO: Write Vim update script'
+    vimrc = File.expand_path('~/.vimrc')
+
+    File.delete(vimrc) if File.symlink?(vimrc)
+    File.symlink(File.expand_path('vimrc.vim'), vimrc)
   end
 end
