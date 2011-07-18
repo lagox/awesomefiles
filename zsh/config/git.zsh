@@ -27,3 +27,6 @@ alias gp="git push"
 # Diff
 alias gd="git difftool"
 alias gds="git difftool --staged"
+
+# Misc
+alias gx="gitx"
