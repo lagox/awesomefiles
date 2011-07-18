@@ -38,6 +38,10 @@ module Vim
       Vim.clone_or_update plugin
       File.symlink( Vim.bundle_path(plugin), File.join( bundle_dir, GitHub.name(plugin) ) )
     end
+
+    # Symlink snippets
+
+    File.symlink( File.expand_path('snippets'), File.join(vim_base, 'snippets') )
   end
 
   def self.clone_or_update(git)
